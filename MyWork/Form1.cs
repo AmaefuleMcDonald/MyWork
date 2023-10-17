@@ -27,7 +27,7 @@ namespace MyWork
 
             var graphics = Graphics.FromImage(pictureBox1.Image);
 
-            graphics.Clear(Color.Transparent);
+            graphics.Clear(Color.Yellow);
 
             if ( "Circle".Equals(textBox1.Text))
             {
@@ -41,6 +41,14 @@ namespace MyWork
             // MessageBox.Show("Hello");
             pictureBox1.Refresh();
         }
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
