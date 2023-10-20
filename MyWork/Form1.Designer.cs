@@ -33,7 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.button2 = new System.Windows.Forms.Button();
+            this.Syntax = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -45,7 +45,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(228, 26);
             this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            //  this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -53,7 +53,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 37);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "Run";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -65,14 +65,15 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // Syntax
             // 
-            this.button2.Location = new System.Drawing.Point(212, 253);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 37);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Syntax.Location = new System.Drawing.Point(212, 253);
+            this.Syntax.Name = "Syntax";
+            this.Syntax.Size = new System.Drawing.Size(75, 37);
+            this.Syntax.TabIndex = 3;
+            this.Syntax.Text = "Syntax";
+            this.Syntax.UseVisualStyleBackColor = true;
+           // this.Syntax.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // richTextBox1
             // 
@@ -80,7 +81,7 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(252, 166);
             this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            //this.richTextBox1.Text = "box";
             // 
             // Form1
             // 
@@ -88,7 +89,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Syntax);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -107,7 +108,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Syntax;
         private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
