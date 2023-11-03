@@ -12,11 +12,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Drawing.Text;
+using System.CodeDom;
 
 namespace MyWork
 {
+   
+
+
+
+
     public partial class Form1 : Form
     {
+        public Action buttonClickAction;
         private PaintEventHandler pictureBox1_Paint;
         private SyntaxChecker syntaxChecker; // Add a syntax checker
         private MenuStrip menuStrip1;
@@ -30,6 +37,8 @@ namespace MyWork
         private ToolStripMenuItem loadToolStripMenuItem;
         private ToolStripMenuItem saveToolStripMenuItem;
         private bool fillShapes;
+        //private Graphics graphics;
+        //private bool errorDisplayed;
 
         private void LoadFromFile(string fileName)
         {
@@ -97,19 +106,33 @@ namespace MyWork
             }
         }
 
-        private void ExecuteCommand(string command)
-        {
-            try
+
+        //public class CommandExecutor
+        //{
+           // private SyntaxChecker syntaxChecker;
+
+            //public CommandExecutor()
+           // {
+           //     syntaxChecker = new SyntaxChecker();
+            //}
+
+           // public object buttonClickAction { get; private set; }
+
+            public void ExecuteCommand(string command)
             {
-                syntaxChecker.CheckSyntax(command); //check the syntax of the command
-                string[] input = command.Split(' ');
-                button1.PerformClick();
+                try
+                {
+                    syntaxChecker.CheckSyntax(command); //check the syntax of the command
+                    string[] input = command.Split(' ');
+                    buttonClickAction?.Invoke();
+                }
+                catch (ArgumentException ex)
+                {
+                    MessageBox.Show(ex.Message, "Syntax Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //throw ex;
+                }
             }
-            catch (ArgumentException ex)
-            {
-                MessageBox.Show(ex.Message, "Syntax Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //}
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -120,6 +143,12 @@ namespace MyWork
                 e.Handled = true;
             }
         }
+
+       // private void ExecuteCommand(string command)
+       // {
+        //    throw new NotImplementedException();
+       // }
+
         public Form1()
         {
             InitializeComponent();

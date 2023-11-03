@@ -1,4 +1,7 @@
-﻿namespace MyWork
+﻿using System;
+
+
+namespace MyWork
 {
     partial class Form1
     {
@@ -9,6 +12,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Syntax;
+       
 
         protected override void Dispose(bool disposing)
         {
@@ -31,15 +35,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
 
-            //button1
-            this.button1.Location = new System.Drawing.Point(94, 253);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Run";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-
+           
+                //button1
+                this.button1.Location = new System.Drawing.Point(94, 253);
+                this.button1.Name = "button1";
+                this.button1.Size = new System.Drawing.Size(75, 37);
+                this.button1.TabIndex = 1;
+                this.button1.Text = "Run";
+                this.button1.UseVisualStyleBackColor = true;
+                this.button1.Click += new System.EventHandler(this.button1_Click);
+            
             //textBox1
             this.textBox1.Location = new System.Drawing.Point(85, 200);
             this.textBox1.Name = "textBox1";
